@@ -33,6 +33,11 @@ x <- factor (c(T,F,T,T,F) ,
 levels = c(T,F))
 x
 
-
-
+## missing values 
+x <- c (1,2,3,NA,5)
+is.na(x)
+is.nan(x)
+x <- c (1,2,3,NA,nan)
+is.na(x)
+is.nan(x) 
 
