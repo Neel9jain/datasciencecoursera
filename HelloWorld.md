@@ -27,3 +27,12 @@ y <- 10:12
 m <- rbind (x,y)
 m
 
+## factors 
+
+x <- factor (c(T,F,T,T,F) , 
+levels = c(T,F))
+x
+
+
+
+
