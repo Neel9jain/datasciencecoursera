@@ -37,7 +37,7 @@ x
 x <- c (1,2,3,NA,5)
 is.na(x)
 is.nan(x)
-x <- c (1,2,3,NA,nan)
+x <- c (1,2,3,4,NaN)
 is.na(x)
 is.nan(x) 
 
