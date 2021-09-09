@@ -41,3 +41,20 @@ x <- c (1,2,3,4,NaN)
 is.na(x)
 is.nan(x) 
 
+
+## data frames 
+
+x <- data.frame( k = 1:4 , bar = c("hi", "i", "am" , "neelesh"))
+x
+nrow (x)
+ncol(x)
+row.names(x)
+
+## names attributes 
+x <- 1:3
+x
+names(x)
+names(x) <- c("anty", "Bunty","shunty")
+names(x)
+x
+
