@@ -57,4 +57,15 @@ names(x)
 names(x) <- c("anty", "Bunty","shunty")
 names(x)
 x
+x <- list (a=1,b=2,c=3)
+
+ 
+## reading tabulat data
+
+## y <- read.table("read.txt")
+
+
+getOption("max.print")
+y <- read.table("read.txt", nrows=3)
+y
 
