@@ -60,7 +60,7 @@ x
 x <- list (a=1,b=2,c=3)
 
  
-## reading tabulat data
+## reading tabular data
 
 ## y <- read.table("read.txt")
 
@@ -68,4 +68,59 @@ x <- list (a=1,b=2,c=3)
 getOption("max.print")
 y <- read.table("read.txt", nrows=3)
 y
+
+
+## textual data formats 
+
+x <- data.frame(a = 1 , b = "b")
+y <- c(1,2)
+dump(c("x","y"), file="dump.R")
+x
+dput(x)
+ dput(x , file = "dput.R")
+ y <- dget("dput.R")
+ y 
+ 
+ 
+## subsetting 
+a <- list (aunty= "x" , shunty = c(1,2,3,4),bunty = "hello")
+a
+
+a [1] 
+a $bunty 
+
+a [c(1,3)]
+
+
+c <- matrix (1:6 ,3,2)
+c  
+ 
+## removing missing valies 
+z = c (1,2,NA,4,5)
+z
+
+bad = is.na(z)
+bad 
+ 
+z[!bad]
+ 
+mgood <-  complete.cases(read.csv("hw1_data.csv")
+) 
+ 
+msg <- read.csv("hw1_data.csv")
+ 
+msg[good,][1, ]
+
+##return first column 
+msg[,1]
+good <- complete.cases (msg[,1])
+msg[good,][,1]  ## returns good values 
+k <- msg[good,][,1] >31
+may <-msg [good][,5] = 6
+
+
+
+d[d %in% 1:5] <- 0
+
+
 
