@@ -186,6 +186,8 @@ z<- z-1
 
 
 
+
+
 for (i in 1:1000)
 {
 if (i ==20)
@@ -195,3 +197,16 @@ break
 }
 print (i)
 }
+
+check_great <- function (x,y)
+{
+   use <-  x>y 
+   x[use]   
+    
+ }
+
+
+
+
+x <- c (20,1,23,52,45,12,2)
+check_great(x,12)
