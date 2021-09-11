@@ -124,3 +124,74 @@ d[d %in% 1:5] <- 0
 
 
 
+
+
+x[!is.na(x) & x > 0] 
+
+## if condition 
+
+if (x > 3)
+{
+y<-3
+print ("hereaaa")
+} else 
+{
+print ("here tooaaa")
+
+}
+
+
+## for loop 
+for (i in c(1,2,3))
+{print(i)}
+
+
+
+x<- matrix(1:6,nrow =2 , ncol=3)
+for(i in seq_len(nrow(x)))
+{
+for(j in seq_len(ncol(x))) 
+{
+print (x[i,j]) 
+}
+}
+
+
+
+## while loop
+
+count <-0
+while (count < 10)
+{
+print(count)
+count <- count+1
+} 
+
+
+z<-5
+
+while (z>=3 && z<10)
+{
+print (z)
+coin <- rbinom (1,1,0.5)
+}
+if (coin == 1 )
+{
+z <- z+1 
+} else 
+{
+z<- z-1 
+}
+
+
+
+
+for (i in 1:1000)
+{
+if (i ==20)
+{
+print (i)
+break  
+}
+print (i)
+}
