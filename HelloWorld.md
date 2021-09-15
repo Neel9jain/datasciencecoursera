@@ -59,7 +59,7 @@ names(x)
 x
 x <- list (a=1,b=2,c=3)
 
- 
+
 ## reading tabular data
 
 ## y <- read.table("read.txt")
@@ -77,11 +77,11 @@ y <- c(1,2)
 dump(c("x","y"), file="dump.R")
 x
 dput(x)
- dput(x , file = "dput.R")
- y <- dget("dput.R")
- y 
- 
- 
+dput(x , file = "dput.R")
+y <- dget("dput.R")
+y 
+
+
 ## subsetting 
 a <- list (aunty= "x" , shunty = c(1,2,3,4),bunty = "hello")
 a
@@ -94,21 +94,21 @@ a [c(1,3)]
 
 c <- matrix (1:6 ,3,2)
 c  
- 
+
 ## removing missing valies 
 z = c (1,2,NA,4,5)
 z
 
 bad = is.na(z)
 bad 
- 
+
 z[!bad]
- 
+
 mgood <-  complete.cases(read.csv("hw1_data.csv")
 ) 
- 
+
 msg <- read.csv("hw1_data.csv")
- 
+
 msg[good,][1, ]
 
 ##return first column 
@@ -198,15 +198,52 @@ break
 print (i)
 }
 
-check_great <- function (x,y)
+default <-10 
+check_great <- function (x,default)
 {
-   use <-  x>y 
-   x[use]   
-    
- }
+use <-  x>y 
+x[use]   
+
+}
 
 
 
 
-x <- c (20,1,23,52,45,12,2)
+x <- 1:20
 check_great(x,12)
+
+
+
+
+##lazy evaluation 
+lazy <- function (a,b)
+{
+a^67
+
+}
+
+
+
+lazy1 <- function(a,b)
+{
+print(a)
+b<-a
+print(b)
+
+
+}
+
+
+#dates in R
+
+x<- as.Date("1986-04-09")
+
+
+
+x<- Sys.time()
+p <- as.POSIXlt(x)
+names(unclass(p)) 
+
+## r proxy 
+library(httr)
+set_config(use_proxy(url="http://10.145.10.30",port = 80,username = "neelesh_jain", password = "Nel941986"))
