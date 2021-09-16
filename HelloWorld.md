@@ -247,3 +247,67 @@ names(unclass(p))
 ## r proxy 
 library(httr)
 set_config(use_proxy(url="http://10.145.10.30",port = 80,username = "neelesh_jain", password = "Nel941986"))
+
+
+## lapply 
+
+## requires a list of variables and the function you want to run on it  
+x<- list(a = 1:5,b = rnorm(10))
+lapply(x,mean)
+
+
+x <- list(a=1:4)
+lapply(x,runif, min =0 , max =10 )
+
+x <- 1:4 
+lapply(x,runif, min =0 , max =10 )
+
+
+## anonymous functions with lappy 
+a <- matrix (1:6,3,2)
+b <- matrix (1:4,2,2)
+k<- list (a,b)
+lapply(k ,function(elt) elt[,1])
+
+
+
+## sapply just simplifies the results 
+x<- list(a = 1:5,b = rnorm(10))
+ sapply(x, mean)
+ 
+ 
+##apply 
+x <- matrix(rnorm(200),20,10)
+
+apply(x, 2,mean) 
+## here 1 or 2 is the number of rows of colums 
+
+
+## col/row sums and means 
+
+rowSums(x)
+rowMeans(x)
+colSums(x) 
+colMeans(x)
+
+
+## mapply function 
+mapply(rep,1:4,4:1)   
+## rep(a,b) here a will be taken from first 1:4 for each of 4 runs and b would be taken from second 4:1 for the values 
+
+
+## tapply function 
+
+x <- c(rnorm(10),runif(10),rnorm(10,1))
+f <- gl(3,10)
+tapply(x,f,mean)
+
+tapply(x,f,range)
+
+## split function 
+## slpits the variables in the leveles as mentioned in factor variable
+
+x <- c(rnorm(10),runif(10),rnorm(10,1))
+f <- gl(3,10)
+
+split(x,f)
