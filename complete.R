@@ -29,6 +29,6 @@ complete <-  function(directory, id)
                 print(paste(value ,comp_case)) 
                 
         }
-        
         setwd("C:/Users/Administrator/Documents/Data Science using R/Projects/datasciencecoursera")          
+        
 }

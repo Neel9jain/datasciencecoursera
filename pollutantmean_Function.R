@@ -39,21 +39,21 @@ pollutantmean <- function(directory, pollutant, id)
       ##reading the data
          ind_data <- read.csv(value);
          Bigdata <- rbind(Bigdata,ind_data)
-        
-         
         }      
         
        good_data <- complete.cases(Bigdata) 
        if (pollutant == "sulfate")
        {
-      mean_val <- mean (Bigdata [good_data,][,2])
+               mean_val <- mean (Bigdata [good_data,][-1,2])
        }
        
        if (pollutant == "nitrate")
        {
-               mean_val <- mean (Bigdata [good_data,][,3])
+               mean_val <- mean (Bigdata [good_data,][-1 ,3])
        }
+       
        print(mean_val)
        
        setwd("C:/Users/Administrator/Documents/Data Science using R/Projects/datasciencecoursera")          
+       return(mean_val)
 }
